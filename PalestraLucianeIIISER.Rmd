@@ -1,0 +1,150 @@
+---
+title: "R for Science Integration Challenge"
+author: 
+- Luciane Ferreira Alcoforado
+
+output:
+  revealjs::revealjs_presentation:
+    template: default_mod.html
+    self_contained: false
+    center: true
+    theme: sky
+    highlight: pygments
+    background_transition: none
+    transition: default
+    reveal_plugins: ["chalkboard"]
+    reveal_options:
+      chalkboard:
+        theme: whiteboard
+        toggleNotesButton: false
+---
+
+## Estatística é com R! {data-background-image="ser3.png" data-background-size="130px" data-background-position=top}
+
+>- www.estatisticacomr.uff.br mais de 60 mil visualizações
+>- www.facebook.com/estatisticacomr mais de 1300 curtidas
+>- www.youtube.com/estatisticacomr mais de 9 mil visualizações e 400 inscritos
+>- Portal, vídeos, tutoriais, livros e treinamento.
+
+## Programa Estatística é com R! {data-background-image="ser3.png" data-background-size="130px" data-background-position=top}
+
+<div class="midcenter" style="margin-left:-3px; margin-top:-3px;">
+<img src="Curtidas_face_abril18.png"></img>
+</div>
+
+## I SER {data-background-image="ser3.png" data-background-size="130px" data-background-position=top}
+
+>- Parcerias Ence/IBGE, IMPA e apoio da CAPES.
+>- 3 oficinas: Visualização de Dados, Rcommander e Inteligência Artificial.
+>- 11 palestras: relatórios dinâmicos, BETS, Survey, Swirl, Big Data, Estatística Espacial, Planejamento Amostral, Modelos de Confiabilidade, Biologia Computacional, Aprendizado do R, Painéis Shiny.
+>- Espaço Blog, Espaço Empresa, Mesa Redonda e Laboratório de Experimentação para iniciantes
+
+## I SER {data-background-image="ser3.png" data-background-size="130px" data-background-position=top}
+
+>- Sessão Pôster: 25 trabalhos envolvendo 59 autores da CEFET, EMBRAPA, ENCE, ESTÁCIO-RN, FGV, IBMEC, MC15 CONSULTORIA, PUC-RJ, UFF, UFPB, UFPR, UFRJ, UNIRIO, UN. DE FLORENÇA. Premiação.
+>- E-book com capítulos dos palestrantes:<p  style=" margin: 0px auto 0px auto; font-family: Helvetica,Arial,Sans-serif; font-style: normal; font-variant: normal; font-weight: normal; font-size: 14px; line-height: normal; font-size-adjust: none; font-stretch: normal; -x-system-font: none; display: block;">   <a title="View Statistics With R: Inovação no Mercado Profissional on Scribd" href="https://www.scribd.com/document/361600824/Statistics-With-R-Inovacao-no-Mercado-Profissional#from_embed"  style="text-decoration: underline;" >Statistics With R: Inovação no Mercado Profissional</a> by <a title="View Luciane Alcoforado's profile on Scribd" href="https://pt.scribd.com/user/136968174/Luciane-Alcoforado#from_embed"  style="text-decoration: underline;" >Luciane Alcoforado</a> on Scribd</p>
+>- Anais do SER 2016, ISBN 978-85-98026-63-3:<p  style=" margin: 0px auto 0px auto; font-family: Helvetica,Arial,Sans-serif; font-style: normal; font-variant: normal; font-weight: normal; font-size: 14px; line-height: normal; font-size-adjust: none; font-stretch: normal; -x-system-font: none; display: block;">   <a title="View Anais Ser 2016 on Scribd" href="https://www.scribd.com/document/346151128/Anais-Ser-2016#from_embed"  style="text-decoration: underline;" >Anais Ser 2016</a> by <a title="View Luciane Alcoforado's profile on Scribd" href="https://pt.scribd.com/user/136968174/Luciane-Alcoforado#from_embed"  style="text-decoration: underline;" >Luciane Alcoforado</a> on Scribd</p>
+
+## Premiação {data-background-image="ser3.png" data-background-size="130px" data-background-position=bottom}
+
+<div class="midcenter" style="margin-left:-3px; margin-top:-3px;">
+<img src="Premiacao2016.jpg"></img>
+</div>
+
+## II SER {data-background-image="ser3.png" data-background-size="130px" data-background-position=top}
+
+>- Parcerias Ence/IBGE, IMPA, SBMAC e apoio da FAPERJ.
+>- 3 oficinas: ggplot2, Programação em R e Inteligência Artificial.
+>- 7 minicursos: MLG, Multivariada, Teoria da Resposta ao Item, Dashboards, Séries Temporais, Iniciando com R e Letramento Estatístico
+
+## II SER {data-background-image="ser3.png" data-background-size="130px" data-background-position=top}
+
+>- 6 palestras: Data Science em dados de Criminalidade, Comex Vis, Economia, Banco de Dados SQL e NOSQL, Modelos de Regressão Censurados, Modelos de dados de temperatura máxima.
+>- 3 conferências: Modelos de Previsão e Séries Temporais
+>- Espaço Blog e Laboratório de Experimentação para iniciantes
+
+## II SER {data-background-image="ser3.png" data-background-size="150px" data-background-position=top}
+
+>- Sessão Pôster: 27 trabalhos envolvendo 85 autores de CEFET, EMBRAPA,  ENCE, FIOCRUZ, INEP, IPEA, PUC-RJ, UERJ, UFBA, UFCG, UFF, UFPA, UFRJ, UFRN, UFRRJ, UFSC, UNIMONTES, UNIRIO. Premiação.
+>- Sessão Oral: 21 trabalhos envolvendo 60 autores de BRITISH AMERICAM TOBACCO, CEFET, CHM, CMASM, EMBRAPA, IFNMG, MC15 Consultores, NOVA IMS, PUC-RJ, UERJ, UDESC, UFBA, UFG, UFF, UFPI, UFRGS, UFRJ, UFSC, UNIFACS, UNIMONTES. Premiação.
+
+## Premiação {data-background-image="ser3.png" data-background-size="130px" data-background-position=bottom}
+
+<div class="midcenter" style="margin-left:-3px; margin-top:-3px;">
+<img src="Premiacao2017.jpg"></img>
+</div>
+
+
+
+
+## II SER {data-background-image="ser3.png" data-background-size="130px" data-background-position=top}
+
+>- Anais do SER ISSN 2526-7299 e ISBN 978-85-94029-02-7:<p  style=" margin: 12px auto 6px auto; font-family: Helvetica,Arial,Sans-serif; font-style: normal; font-variant: normal; font-weight: normal; font-size: 14px; line-height: normal; font-size-adjust: none; font-stretch: normal; -x-system-font: none; display: block;">   <a title="View Anais Ser2017 Vol2n1  on Scribd" href="https://www.scribd.com/document/360344437/Anais-Ser2017-Vol2n1#from_embed"  style="text-decoration: underline;" >Anais Ser2017 Vol2n1</a> by <a title="View Luciane Alcoforado's profile on Scribd" href="https://pt.scribd.com/user/136968174/Luciane-Alcoforado#from_embed"  style="text-decoration: underline;" >Luciane Alcoforado</a> on Scribd</p><iframe class="scribd_iframe_embed" title="Anais Ser2017 Vol2n1 " src="https://www.scribd.com/embeds/360344437/content?start_page=1&view_mode=scroll&access_key=key-OI6UZOxxgbQyQu2urONU&show_recommendations=true" data-auto-height="false" data-aspect-ratio="0.7080062794348508" scrolling="no" id="doc_75999" width="50%" height="30%" frameborder="0"></iframe><p  style=" margin: 12px auto 6px auto; font-family: Helvetica,Arial,Sans-serif; font-style: normal; font-variant: normal; font-weight: normal; font-size: 14px; line-height: normal; font-size-adjust: none; font-stretch: normal; -x-system-font: none; display: block;">   <a title="View Anais Ser2017 Vol2n2 on Scribd" href="https://www.scribd.com/document/360344687/Anais-Ser2017-Vol2n2#from_embed"  style="text-decoration: underline;" >Anais Ser2017 Vol2n2</a> by <a title="View Luciane Alcoforado's profile on Scribd" href="https://pt.scribd.com/user/136968174/Luciane-Alcoforado#from_embed"  style="text-decoration: underline;" >Luciane Alcoforado</a> on Scribd</p><iframe class="scribd_iframe_embed" title="Anais Ser2017 Vol2n2" src="https://www.scribd.com/embeds/360344687/content?start_page=1&view_mode=scroll&access_key=key-DYUus6t9EApYxghy2qzf&show_recommendations=true" data-auto-height="false" data-aspect-ratio="0.7080062794348508" scrolling="no" id="doc_64568" width="50%" height="30%" frameborder="0"></iframe>
+>- http://seruff.weebly.com/
+
+
+## Data Mining - Prof. Torgo {data-background-image="ser3.png" data-background-size="130px" data-background-position=bottom}
+
+<div class="midcenter" style="margin-left:-3px; margin-top:-3px;">
+<img src="datamining.png"></img>
+</div>
+
+
+
+## III SER {data-background-image="ser3.png" data-background-size="130px" data-background-position=top}
+
+>- Parcerias Ence/IBGE, IMPA, SBMAC, UNIRIO e apoio da CAPES.
+>- 8 minicursos: Criação de Pacote, Relatórios dinâmicos, gráficos 2d e 3d, modelos politômicos, jurimetria, Web Scraping, Inferência Bayesiana, Dados financeiros.
+>- 8 palestras: mapas, distribuições estáveis, relatórios financeiros, PURRR, mercado de trabalho, aprendizagem do R, Shiny.
+>- 5 conferências: Aprendizagem, programação em R, Equações Estruturais, Teoria da resposta ao item, Mineração de textos, R-ladies
+
+
+## Iniciantes em R {data-background-image="ser3.png" data-background-size="130px" data-background-position=bottom}
+
+>- Minicurso Gratuito (online) de Introdução ao R com mais de 400 participantes
+>- https://goo.gl/forms/XWupYzh5dE0mhrFz2
+
+## Folder {data-background-image="ser3.png" data-background-size="130px" data-background-position=bottom}
+
+>- Marcador de livro com comandos do R
+
+
+## Sessão Pôster III SER {data-background-image="ser3.png" data-background-size="130px" data-background-position=top}
+
+>- 24 trabalhos envolvendo 69 autores de ENCE, IBGE, IFSC, INEP, PESAGRO, SEAPEC, UDESC, UFBA, UFF, UFG, UFMG, UFSC, UFSCAR, UNIRIO, USP. Premiação.
+
+## Sessão Oral III SER {data-background-image="ser3.png" data-background-size="130px" data-background-position=top}
+
+>- 26 trabalhos envolvendo 75 autores de CEFET, FGV, IFF, IFMG, IFMT, MACROPLAN, MPPR, PUC-RJ, UCDB-MS, UEM, UERJ, UFBA, UFF, UFGD, UFMS, UFRJ, UN. SANTIAGO DE COMPOSTELA, UNIRIO, UPE, USP. Premiação.
+
+## IV SER_py {data-background-image="ser3.png" data-background-size="130px" data-background-position=top}
+
+>- Novas parcerias.
+>- Integração R & Python.
+>- Ampliar a participação de Instituições da América Latina.
+>- Multidisplinaridade/Pesquisa/Mercado de Trabalho.
+
+
+## Confraternização {data-background-image="ser3.png" data-background-size="130px" data-background-position=bottom}
+
+<div class="midcenter" style="margin-left:-3px; margin-top:-3px;">
+<img src="confraternizacao2016.jpg"></img>
+</div>
+
+## Confraternização {data-background-image="ser3.png" data-background-size="130px" data-background-position=bottom}
+
+<div class="midcenter" style="margin-left:-3px; margin-top:-3px;">
+<img src="confraternizacao20171.jpg"></img>
+</div>
+
+## Confraternização {data-background-image="ser3.png" data-background-size="130px" data-background-position=bottom}
+
+<div class="midcenter" style="margin-left:-3px; margin-top:-3px;">
+<img src="confraternizacao20172.jpg"></img>
+</div>
+
+## Confraternização {data-background-image="ser3.png" data-background-size="130px" data-background-position=bottom}
+
+<div class="midcenter" style="margin-left:0px; margin-top:0px;">
+<img src="confraternizacao20173.png"></img>
+</div>

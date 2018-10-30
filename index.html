@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Luciane Ferreira Alcoforado" />
+  <title>R for Science Integration Challenge</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="PalestraLucianeIIISERteste_files/reveal.js-3.3.0.1/css/reveal.css"/>
+
+
+
+<link rel="stylesheet" href="PalestraLucianeIIISERteste_files/reveal.js-3.3.0.1/css/theme/sky.css" id="theme">
+
+
+  <!-- some tweaks to reveal css -->
+  <style type="text/css">
+    .reveal h1 { font-size: 2.0em; }
+    .reveal h2 { font-size: 1.5em;  }
+    .reveal h3 { font-size: 1.25em;	}
+    .reveal h4 { font-size: 1em;	}
+
+    .reveal .slides>section,
+    .reveal .slides>section>section {
+      padding: 0px 0px;
+    }
+
+
+
+    .reveal table {
+      border-width: 1px;
+      border-spacing: 2px;
+      border-style: dotted;
+      border-color: gray;
+      border-collapse: collapse;
+      font-size: 0.7em;
+    }
+
+    .reveal table th {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      font-weight: bold;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+    .reveal table td {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+
+  </style>
+
+    <style type="text/css">code{white-space: pre;}</style>
+
+
+<!-- Printing and PDF exports -->
+<script id="paper-css" type="application/dynamic-css">
+
+/* Default Print Stylesheet Template
+   by Rob Glazebrook of CSSnewbie.com
+   Last Updated: June 4, 2008
+
+   Feel free (nay, compelled) to edit, append, and
+   manipulate this file as you see fit. */
+
+
+@media print {
+
+	/* SECTION 1: Set default width, margin, float, and
+	   background. This prevents elements from extending
+	   beyond the edge of the printed page, and prevents
+	   unnecessary background images from printing */
+	html {
+		background: #fff;
+		width: auto;
+		height: auto;
+		overflow: visible;
+	}
+	body {
+		background: #fff;
+		font-size: 20pt;
+		width: auto;
+		height: auto;
+		border: 0;
+		margin: 0 5%;
+		padding: 0;
+		overflow: visible;
+		float: none !important;
+	}
+
+	/* SECTION 2: Remove any elements not needed in print.
+	   This would include navigation, ads, sidebars, etc. */
+	.nestedarrow,
+	.controls,
+	.fork-reveal,
+	.share-reveal,
+	.state-background,
+	.reveal .progress,
+	.reveal .backgrounds {
+		display: none !important;
+	}
+
+	/* SECTION 3: Set body font face, size, and color.
+	   Consider using a serif font for readability. */
+	body, p, td, li, div {
+		font-size: 20pt!important;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		color: #000;
+	}
+
+	/* SECTION 4: Set heading font face, sizes, and color.
+	   Differentiate your headings from your body text.
+	   Perhaps use a large sans-serif for distinction. */
+	h1,h2,h3,h4,h5,h6 {
+		color: #000!important;
+		height: auto;
+		line-height: normal;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		text-shadow: 0 0 0 #000 !important;
+		text-align: left;
+		letter-spacing: normal;
+	}
+	/* Need to reduce the size of the fonts for printing */
+	h1 { font-size: 28pt !important;  }
+	h2 { font-size: 24pt !important; }
+	h3 { font-size: 22pt !important; }
+	h4 { font-size: 22pt !important; font-variant: small-caps; }
+	h5 { font-size: 21pt !important; }
+	h6 { font-size: 20pt !important; font-style: italic; }
+
+	/* SECTION 5: Make hyperlinks more usable.
+	   Ensure links are underlined, and consider appending
+	   the URL to the end of the link for usability. */
+	a:link,
+	a:visited {
+		color: #000 !important;
+		font-weight: bold;
+		text-decoration: underline;
+	}
+	/*
+	.reveal a:link:after,
+	.reveal a:visited:after {
+		content: " (" attr(href) ") ";
+		color: #222 !important;
+		font-size: 90%;
+	}
+	*/
+
+
+	/* SECTION 6: more reveal.js specific additions by @skypanther */
+	ul, ol, div, p {
+		visibility: visible;
+		position: static;
+		width: auto;
+		height: auto;
+		display: block;
+		overflow: visible;
+		margin: 0;
+		text-align: left !important;
+	}
+	.reveal pre,
+	.reveal table {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.reveal pre code {
+		padding: 20px;
+		border: 1px solid #ddd;
+	}
+	.reveal blockquote {
+		margin: 20px 0;
+	}
+	.reveal .slides {
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 0 !important;
+		zoom: 1 !important;
+
+		overflow: visible !important;
+		display: block !important;
+
+		text-align: left !important;
+		-webkit-perspective: none;
+		   -moz-perspective: none;
+		    -ms-perspective: none;
+		        perspective: none;
+
+		-webkit-perspective-origin: 50% 50%;
+		   -moz-perspective-origin: 50% 50%;
+		    -ms-perspective-origin: 50% 50%;
+		        perspective-origin: 50% 50%;
+	}
+	.reveal .slides section {
+		visibility: visible !important;
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+		display: block !important;
+		overflow: visible !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 60px 20px !important;
+		z-index: auto !important;
+
+		opacity: 1 !important;
+
+		page-break-after: always !important;
+
+		-webkit-transform-style: flat !important;
+		   -moz-transform-style: flat !important;
+		    -ms-transform-style: flat !important;
+		        transform-style: flat !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+
+		-webkit-transition: none !important;
+		   -moz-transition: none !important;
+		    -ms-transition: none !important;
+		        transition: none !important;
+	}
+	.reveal .slides section.stack {
+		padding: 0 !important;
+	}
+	.reveal section:last-of-type {
+		page-break-after: avoid !important;
+	}
+	.reveal section .fragment {
+		opacity: 1 !important;
+		visibility: visible !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+	}
+	.reveal section img {
+		display: block;
+		margin: 15px 0px;
+		background: rgba(255,255,255,1);
+		border: 1px solid #666;
+		box-shadow: none;
+	}
+
+	.reveal section small {
+		font-size: 0.8em;
+	}
+
+}  
+</script>
+
+
+<script id="pdf-css" type="application/dynamic-css">
+    
+/**
+ * This stylesheet is used to print reveal.js
+ * presentations to PDF.
+ *
+ * https://github.com/hakimel/reveal.js#pdf-export
+ */
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+
+body {
+	margin: 0 auto !important;
+	border: 0;
+	padding: 0;
+	float: none !important;
+	overflow: visible;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+	overflow: visible;
+}
+
+/* Remove any elements not needed in print. */
+.nestedarrow,
+.reveal .controls,
+.reveal .progress,
+.reveal .playback,
+.reveal.overview,
+.fork-reveal,
+.share-reveal,
+.state-background {
+	display: none !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	text-shadow: 0 0 0 #000 !important;
+}
+
+.reveal pre code {
+	overflow: hidden !important;
+	font-family: Courier, 'Courier New', monospace !important;
+}
+
+ul, ol, div, p {
+	visibility: visible;
+	position: static;
+	width: auto;
+	height: auto;
+	display: block;
+	overflow: visible;
+	margin: auto;
+}
+.reveal {
+	width: auto !important;
+	height: auto !important;
+	overflow: hidden !important;
+}
+.reveal .slides {
+	position: static;
+	width: 100%;
+	height: auto;
+
+	left: auto;
+	top: auto;
+	margin: 0 !important;
+	padding: 0 !important;
+
+	overflow: visible;
+	display: block;
+
+	-webkit-perspective: none;
+	   -moz-perspective: none;
+	    -ms-perspective: none;
+	        perspective: none;
+
+	-webkit-perspective-origin: 50% 50%; /* there isn't a none/auto value but 50-50 is the default */
+	   -moz-perspective-origin: 50% 50%;
+	    -ms-perspective-origin: 50% 50%;
+	        perspective-origin: 50% 50%;
+}
+
+.reveal .slides section {
+	page-break-after: always !important;
+
+	visibility: visible !important;
+	position: relative !important;
+	display: block !important;
+	position: relative !important;
+
+	margin: 0 !important;
+	padding: 0 !important;
+	box-sizing: border-box !important;
+	min-height: 1px;
+
+	opacity: 1 !important;
+
+	-webkit-transform-style: flat !important;
+	   -moz-transform-style: flat !important;
+	    -ms-transform-style: flat !important;
+	        transform-style: flat !important;
+
+	-webkit-transform: none !important;
+	   -moz-transform: none !important;
+	    -ms-transform: none !important;
+	        transform: none !important;
+}
+
+.reveal section.stack {
+	margin: 0 !important;
+	padding: 0 !important;
+	page-break-after: avoid !important;
+	height: auto !important;
+	min-height: auto !important;
+}
+
+.reveal img {
+	box-shadow: none;
+}
+
+.reveal .roll {
+	overflow: visible;
+	line-height: 1em;
+}
+
+/* Slide backgrounds are placed inside of their slide when exporting to PDF */
+.reveal section .slide-background {
+	display: block !important;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: -1;
+}
+
+/* All elements should be above the slide-background */
+.reveal section>* {
+	position: relative;
+	z-index: 1;
+}
+
+/* Display slide speaker notes when 'showNotes' is enabled */
+.reveal .speaker-notes-pdf {
+	display: block;
+	width: 100%;
+	max-height: none;
+	left: auto;
+	top: auto;
+	z-index: 100;
+}
+
+/* Display slide numbers when 'slideNumber' is enabled */
+.reveal .slide-number-pdf {
+	display: block;
+	position: absolute;
+	font-size: 14px;
+}
+
+</script>
+
+
+<script>
+var style = document.createElement( 'style' );
+style.type = 'text/css';
+var style_script_id = window.location.search.match( /print-pdf/gi ) ? 'pdf-css' : 'paper-css';
+var style_script = document.getElementById(style_script_id).text;
+style.innerHTML = style_script;
+document.getElementsByTagName('head')[0].appendChild(style);
+</script>
+
+</head>
+<body>
+  <div class="reveal">
+  <div class="page-body">
+   <!-- A linha de cima foi incluida para zoom -->
+    <div class="slides">
+
+<section data-background-image="C:/Users/leo-f/Desktop/Leonardo/UFF/Projetos/ser/ser3.png" data-background-size="150px" data-background-position=bottom>
+    <h1 class="title">R for Science Integration Challenge</h1>
+    <h2 class="author">Luciane Ferreira Alcoforado</h2>
+</section>
+
+<section><section id="estatistica-e-com-r" class="titleslide slide level1" data-background-image="ser3.png" data-background-size="130px" data-background-position="top"><h1>Estatística é com R!</h1></section><section id="portal" class="slide level2" data-background-iframe="http://www.estatisticacomr.uff.br/">
+<h2>Portal</h2>
+</section><section id="estatistica-e-com-r-1" class="slide level2" data-background-image="ser3.png" data-background-size="130px" data-background-position="top">
+<h2>Estatística é com R!</h2>
+<ul>
+<li class="fragment">www.estatisticacomr.uff.br 100 mil visualizações</li>
+<li class="fragment">www.facebook.com/estatisticacomr mais de 1300 curtidas</li>
+<li class="fragment">www.facebook.com/learn mais de 600 curtidas</li>
+<li class="fragment">www.youtube.com/estatisticacomr mais de 9 mil visualizações e 400 inscritos</li>
+<li class="fragment">Portal, vídeos, tutoriais, livros e treinamento.</li>
+</ul>
+</section><section id="estatistica-e-com-r-2" class="slide level2" data-background-image="ser3.png" data-background-size="130px" data-background-position="top">
+<h2>Estatística é com R!</h2>
+<div class="midcenter" style="margin-left:-3px; margin-top:-3px;">
+<p><img src="estatisticassite.png"></img></p>
+</div>
+</section></section>
+<section><section id="i-ser-2016" class="titleslide slide level1" data-background-image="ser3.png" data-background-size="130px" data-background-position="top"><h1>I SER 2016</h1></section><section id="i-ser" class="slide level2" data-background-image="ser3.png" data-background-size="130px" data-background-position="top">
+<h2>I SER</h2>
+<ul>
+<li class="fragment">Parcerias Ence/IBGE, IMPA e apoio da CAPES.</li>
+<li class="fragment">3 oficinas: Visualização de Dados, Rcommander e Inteligência Artificial.</li>
+<li class="fragment">11 palestras: relatórios dinâmicos, BETS, Survey, Swirl, Big Data, Estatística Espacial, Planejamento Amostral, Modelos de Confiabilidade, Biologia Computacional, Aprendizado do R, Painéis Shiny.</li>
+<li class="fragment">Espaço Blog, Espaço Empresa, Mesa Redonda e Laboratório de Experimentação para iniciantes</li>
+</ul>
+</section><section id="i-ser-1" class="slide level2" data-background-image="ser3.png" data-background-size="130px" data-background-position="top">
+<h2>I SER</h2>
+<ul>
+<li class="fragment">Sessão Pôster: 25 trabalhos envolvendo 59 autores da CEFET, EMBRAPA, ENCE, ESTÁCIO-RN, FGV, IBMEC, MC15 CONSULTORIA, PUC-RJ, UFF, UFPB, UFPR, UFRJ, UNIRIO, UN. DE FLORENÇA. Premiação.</li>
+<li class="fragment">E-book com capítulos dos palestrantes:
+<p style=" margin: 0px auto 0px auto; font-family: Helvetica,Arial,Sans-serif; font-style: normal; font-variant: normal; font-weight: normal; font-size: 14px; line-height: normal; font-size-adjust: none; font-stretch: normal; -x-system-font: none; display: block;">
+<a title="View Statistics With R: Inovação no Mercado Profissional on Scribd" href="https://www.scribd.com/document/361600824/Statistics-With-R-Inovacao-no-Mercado-Profissional#from_embed"  style="text-decoration: underline;" >Statistics With R: Inovação no Mercado Profissional</a> by <a title="View Luciane Alcoforado's profile on Scribd" href="https://pt.scribd.com/user/136968174/Luciane-Alcoforado#from_embed"  style="text-decoration: underline;" >Luciane Alcoforado</a> on Scribd
+</p></li>
+<li class="fragment">Anais do SER 2016, ISBN 978-85-98026-63-3:
+<p style=" margin: 0px auto 0px auto; font-family: Helvetica,Arial,Sans-serif; font-style: normal; font-variant: normal; font-weight: normal; font-size: 14px; line-height: normal; font-size-adjust: none; font-stretch: normal; -x-system-font: none; display: block;">
+<a title="View Anais Ser 2016 on Scribd" href="https://www.scribd.com/document/346151128/Anais-Ser-2016#from_embed"  style="text-decoration: underline;" >Anais Ser 2016</a> by <a title="View Luciane Alcoforado's profile on Scribd" href="https://pt.scribd.com/user/136968174/Luciane-Alcoforado#from_embed"  style="text-decoration: underline;" >Luciane Alcoforado</a> on Scribd
+</p></li>
+</ul>
+</section><section id="premiacao" class="slide level2" data-background-image="ser3.png" data-background-size="50px" data-background-position="bottom">
+<h2>Premiação</h2>
+<div class="midcenter" style="margin-left:-3px; margin-top:-3px;">
+<p><img src="Premiacao2016.jpg"></img></p>
+</div>
+</section></section>
+<section><section id="ii-ser-2017" class="titleslide slide level1" data-background-image="ser3.png" data-background-size="130px" data-background-position="top"><h1>II SER 2017</h1></section><section id="ii-ser" class="slide level2" data-background-image="ser3.png" data-background-size="130px" data-background-position="top">
+<h2>II SER</h2>
+<ul>
+<li class="fragment">Parcerias Ence/IBGE, IMPA, SBMAC e apoio da FAPERJ.</li>
+<li class="fragment">3 oficinas: ggplot2, Programação em R e Inteligência Artificial.</li>
+<li class="fragment">7 minicursos: MLG, Multivariada, Teoria da Resposta ao Item, Dashboards, Séries Temporais, Iniciando com R e Letramento Estatístico</li>
+</ul>
+</section><section id="ii-ser-1" class="slide level2" data-background-image="ser3.png" data-background-size="130px" data-background-position="top">
+<h2>II SER</h2>
+<ul>
+<li class="fragment">6 palestras: Data Science em dados de Criminalidade, Comex Vis, Economia, Banco de Dados SQL e NOSQL, Modelos de Regressão Censurados, Modelos de dados de temperatura máxima.</li>
+<li class="fragment">3 conferências: Modelos de Previsão e Séries Temporais</li>
+<li class="fragment">Espaço Blog e Laboratório de Experimentação para iniciantes</li>
+</ul>
+</section><section id="ii-ser-2" class="slide level2" data-background-image="ser3.png" data-background-size="150px" data-background-position="top">
+<h2>II SER</h2>
+<ul>
+<li class="fragment">Sessão Pôster: 27 trabalhos envolvendo 85 autores de CEFET, EMBRAPA, ENCE, FIOCRUZ, INEP, IPEA, PUC-RJ, UERJ, UFBA, UFCG, UFF, UFPA, UFRJ, UFRN, UFRRJ, UFSC, UNIMONTES, UNIRIO. Premiação.</li>
+<li class="fragment">Sessão Oral: 21 trabalhos envolvendo 60 autores de BRITISH AMERICAM TOBACCO, CEFET, CHM, CMASM, EMBRAPA, IFNMG, MC15 Consultores, NOVA IMS, PUC-RJ, UERJ, UDESC, UFBA, UFG, UFF, UFPI, UFRGS, UFRJ, UFSC, UNIFACS, UNIMONTES. Premiação.</li>
+</ul>
+</section><section id="premiacao-1" class="slide level2" data-background-image="ser3.png" data-background-size="130px" data-background-position="bottom">
+<h2>Premiação</h2>
+<div class="midcenter" style="margin-left:-3px; margin-top:-3px;">
+<p><img src="Premiacao2017.jpg"></img></p>
+</div>
+</section><section id="ii-ser-3" class="slide level2" data-background-image="ser3.png" data-background-size="130px" data-background-position="top">
+<h2>II SER</h2>
+<ul>
+<li class="fragment">Anais do SER ISSN 2526-7299 e ISBN 978-85-94029-02-7:
+<p style=" margin: 12px auto 6px auto; font-family: Helvetica,Arial,Sans-serif; font-style: normal; font-variant: normal; font-weight: normal; font-size: 14px; line-height: normal; font-size-adjust: none; font-stretch: normal; -x-system-font: none; display: block;">
+<a title="View Anais Ser2017 Vol2n1  on Scribd" href="https://www.scribd.com/document/360344437/Anais-Ser2017-Vol2n1#from_embed"  style="text-decoration: underline;" >Anais Ser2017 Vol2n1</a> by <a title="View Luciane Alcoforado's profile on Scribd" href="https://pt.scribd.com/user/136968174/Luciane-Alcoforado#from_embed"  style="text-decoration: underline;" >Luciane Alcoforado</a> on Scribd
+</p>
+<iframe class="scribd_iframe_embed" title="Anais Ser2017 Vol2n1 " src="https://www.scribd.com/embeds/360344437/content?start_page=1&amp;view_mode=scroll&amp;access_key=key-OI6UZOxxgbQyQu2urONU&amp;show_recommendations=true" data-auto-height="false" data-aspect-ratio="0.7080062794348508" scrolling="no" id="doc_75999" width="50%" height="30%" frameborder="0">
+</iframe>
+<p style=" margin: 12px auto 6px auto; font-family: Helvetica,Arial,Sans-serif; font-style: normal; font-variant: normal; font-weight: normal; font-size: 14px; line-height: normal; font-size-adjust: none; font-stretch: normal; -x-system-font: none; display: block;">
+<a title="View Anais Ser2017 Vol2n2 on Scribd" href="https://www.scribd.com/document/360344687/Anais-Ser2017-Vol2n2#from_embed"  style="text-decoration: underline;" >Anais Ser2017 Vol2n2</a> by <a title="View Luciane Alcoforado's profile on Scribd" href="https://pt.scribd.com/user/136968174/Luciane-Alcoforado#from_embed"  style="text-decoration: underline;" >Luciane Alcoforado</a> on Scribd
+</p>
+<iframe class="scribd_iframe_embed" title="Anais Ser2017 Vol2n2" src="https://www.scribd.com/embeds/360344687/content?start_page=1&amp;view_mode=scroll&amp;access_key=key-DYUus6t9EApYxghy2qzf&amp;show_recommendations=true" data-auto-height="false" data-aspect-ratio="0.7080062794348508" scrolling="no" id="doc_64568" width="50%" height="30%" frameborder="0">
+</iframe></li>
+<li class="fragment"><a href="http://seruff.weebly.com/" class="uri">http://seruff.weebly.com/</a></li>
+</ul>
+</section><section id="data-mining---prof.torgo" class="slide level2" data-background-image="ser3.png" data-background-size="130px" data-background-position="bottom">
+<h2>Data Mining - Prof. Torgo</h2>
+<div class="midcenter" style="margin-left:-3px; margin-top:-3px;">
+<p><img src="datamining.png"></img></p>
+</div>
+</section></section>
+<section><section id="iii-ser-2018" class="titleslide slide level1" data-background-image="ser3.png" data-background-size="130px" data-background-position="top"><h1>III SER 2018</h1></section><section id="iii-ser" class="slide level2" data-background-image="ser3.png" data-background-size="130px" data-background-position="top">
+<h2>III SER</h2>
+<ul>
+<li class="fragment">Parcerias Ence/IBGE, IMPA, SBMAC, UNIRIO e apoio da CAPES.</li>
+<li class="fragment">8 minicursos: Criação de Pacote, Relatórios dinâmicos, gráficos 2d e 3d, modelos politômicos, jurimetria, Web Scraping, Inferência Bayesiana, Dados financeiros.</li>
+<li class="fragment">8 palestras: mapas, distribuições estáveis, relatórios financeiros, PURRR, mercado de trabalho, aprendizagem do R, Shiny.</li>
+<li class="fragment">5 conferências: Aprendizagem, programação em R, Equações Estruturais, Teoria da resposta ao item, Mineração de textos, R-ladies</li>
+</ul>
+</section><section id="iniciantes-em-r" class="slide level2" data-background-image="ser3.png" data-background-size="130px" data-background-position="bottom">
+<h2>Iniciantes em R</h2>
+<ul>
+<li class="fragment">Minicurso Gratuito (online) de Introdução ao R com mais de 400 participantes</li>
+<li class="fragment"><a href="https://goo.gl/forms/XWupYzh5dE0mhrFz2" class="uri">https://goo.gl/forms/XWupYzh5dE0mhrFz2</a></li>
+</ul>
+</section><section id="folder---marcador-de-livro-com-comandos-do-r" class="slide level2" data-background-image="ser3.png" data-background-size="130px" data-background-position="bottom">
+<h2>Folder - Marcador de livro com comandos do R</h2>
+<div class="midcenter" style="margin-left:0px; margin-top:0px;">
+<p><img src="folderss.png"></img></p>
+</div>
+</section><section id="sessao-poster-iii-ser" class="slide level2" data-background-image="ser3.png" data-background-size="130px" data-background-position="top">
+<h2>Sessão Pôster III SER</h2>
+<ul>
+<li class="fragment">24 trabalhos envolvendo 69 autores de 15 instituições: ENCE, IBGE, IFSC, INEP, PESAGRO, SEAPEC, UDESC, UFBA, UFF, UFG, UFMG, UFSC, UFSCAR, UNIRIO, USP. Premiação.</li>
+</ul>
+</section><section id="sessao-oral-iii-ser" class="slide level2" data-background-image="ser3.png" data-background-size="130px" data-background-position="top">
+<h2>Sessão Oral III SER</h2>
+<ul>
+<li class="fragment">26 trabalhos envolvendo 144 autores de 20 instituições: CEFET, FGV-RJ, IFF, IFMG, IFMT, MACROPLAN, MPPR, PUC-RJ, UCDB-MS, UEM, UERJ, UFBA, UFF, UFGD, UFMS, UFRJ, UN. SANTIAGO DE COMPOSTELA, UNIRIO, UPE, USP. Premiação.</li>
+</ul>
+</section><section id="visao-geral-dos-trabalhos" class="slide level2" data-background-image="ser3.png" data-background-size="130px" data-background-position="top">
+<h2>Visão Geral dos trabalhos</h2>
+<ul>
+<li class="fragment">60 trabalhos envolvendo 75 autores de 31 instituições: CEFET, ENCE, FGV-RJ, IBGE, IFF, IFMG, IFMT, IFSC, INEP, MACROPLAN, MPPR, PESAGRO, PUC-RJ, SEAPEC, UCDB-MS, UDESC, UEM, UERJ, UFBA, UFF, UFG, UFGD, UFMG, UFMS, UFRJ, UFSC, UFSCAR, UN. SANTIAGO DE COMPOSTELA, UNIRIO, UPE, USP.</li>
+</ul>
+</section></section>
+<section><section id="section" class="titleslide slide level1" data-background-image="ser3.png" data-background-size="130px" data-background-position="top"><h1>… 2019</h1></section><section id="iv-ser_py" class="slide level2" data-background-image="ser3.png" data-background-size="130px" data-background-position="top">
+<h2>IV SER_py</h2>
+<ul>
+<li class="fragment">Novas parcerias.</li>
+<li class="fragment">Integração R &amp; Python.</li>
+<li class="fragment">Ampliar a participação de Instituições da América Latina.</li>
+<li class="fragment">Multidisplinaridade/Pesquisa/Mercado de Trabalho.</li>
+</ul>
+</section></section>
+<section><section id="convite" class="titleslide slide level1" data-background-image="ser3.png" data-background-size="50px" data-background-position="bottom"><h1>Convite</h1></section><section id="todos-juntos" class="slide level2">
+<h2>Todos juntos</h2>
+<div class="midcenter" style="margin-left:-3px; margin-top:-3px;">
+<p><img src="confraternizacao2016.jpg"></img></p>
+</div>
+</section><section id="confraternizacao" class="slide level2" data-background-image="ser3.png" data-background-size="130px" data-background-position="bottom">
+<h2>Confraternização</h2>
+<div class="midcenter" style="margin-left:-3px; margin-top:-3px;">
+<p><img src="confraternizacao20171.jpg"></img></p>
+</div>
+</section><section id="confraternizacao-1" class="slide level2" data-background-image="ser3.png" data-background-size="130px" data-background-position="bottom">
+<h2>Confraternização</h2>
+<div class="midcenter" style="margin-left:-3px; margin-top:-3px;">
+<p><img src="confraternizacao20172.jpg"></img></p>
+</div>
+</section><section id="encerrando-o-dia-245" class="slide level2" data-background-image="ser3.png" data-background-size="130px" data-background-position="bottom">
+<h2>Encerrando o dia 24/5</h2>
+<div class="midcenter" style="margin-left:0px; margin-top:0px;">
+<p><img src="confraternizacao20173.png"></img></p>
+</div>
+</section></section>
+    </div>
+  </div>
+
+  <script src="PalestraLucianeIIISERteste_files/reveal.js-3.3.0.1/lib/js/head.min.js"></script>
+  <script src="PalestraLucianeIIISERteste_files/reveal.js-3.3.0.1/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Display the page number of the current slide
+        slideNumber: true,
+        // Push each slide change to the browser history
+        history: true,
+        // Vertical centering of slides
+        center: true,
+        // Opens links in an iframe preview overlay
+        previewLinks: true,
+        // Transition style
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        // Transition style for full page slide backgrounds
+        backgroundTransition: 'concave', // none/fade/slide/convex/concave/zoom
+
+
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'PalestraLucianeIIISERteste_files/reveal.js-3.3.0.1/plugin/zoom-js/zoom.js', async: true },
+        ]
+      });
+    </script>
+  <!-- dynamically load mathjax for compatibility with self-contained -->
+  <script>
+    (function () {
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+      document.getElementsByTagName("head")[0].appendChild(script);
+    })();
+  </script>
+
+<script>
+  (function() {
+    if (window.jQuery) {
+      Reveal.addEventListener( 'slidechanged', function(event) {  
+        window.jQuery(event.previousSlide).trigger('hidden');
+        window.jQuery(event.currentSlide).trigger('shown');
+      });
+    }
+  })();
+</script>
+
+<script src="js/zoom.js"></script>
+		<script>
+			document.querySelector( '.page-body' ).addEventListener( 'click', function( event ) {
+				event.preventDefault();
+				zoom.to({ element: event.target });
+			} );
+		</script>
+
+
+		<!-- Everything below this point is unrelated to the library -->
+
+		
+		<script>
+		var _gaq = [['_setAccount', 'UA-15240703-1'], ['_trackPageview']];
+		(function(d, t) {
+		var g = d.createElement(t),
+		    s = d.getElementsByTagName(t)[0];
+		g.async = true;
+		g.src = ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		s.parentNode.insertBefore(g, s);
+		})(document, 'script');
+		</script>
+		<div style="width: 80px; height: 80px; margin-right: 10px; padding: 10px; float: left;">
+		 <!-- A linha de cima foi incluida para zoom -->
+
+
+
+  </body>
+</html>
